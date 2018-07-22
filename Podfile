@@ -6,5 +6,6 @@ target 'wikisearch' do
   use_frameworks!
 
   pod 'PKHUD'
+  pod 'SDWebImage'
 
 end
