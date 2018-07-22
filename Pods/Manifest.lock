@@ -1,0 +1,16 @@
+PODS:
+  - PKHUD (5.1.0)
+
+DEPENDENCIES:
+  - PKHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PKHUD
+
+SPEC CHECKSUMS:
+  PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
+
+PODFILE CHECKSUM: eaa0751168dcbbfe988ef365fb8c8f251c1ad51c
+
+COCOAPODS: 1.5.3
