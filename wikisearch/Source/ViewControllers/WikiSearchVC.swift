@@ -67,9 +67,9 @@ extension WikiSearchVC: UITableViewDelegate {
 }
 
 extension WikiSearchVC: UISearchBarDelegate {
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = true;
-    }
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//        searchActive = true;
+//    }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchActive = false;
@@ -90,6 +90,11 @@ extension WikiSearchVC: UISearchBarDelegate {
                 let searchResults = SearchResult.parse(from: pages)
                 DispatchQueue.main.async {
                     self.viewmodel.searchItems = searchResults
+                    self.tableView.reloadData()
+                    PKHUD.sharedHUD.hide()
+                }
+            } else {
+                DispatchQueue.main.async {
                     self.tableView.reloadData()
                     PKHUD.sharedHUD.hide()
                 }
